@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EvaluationsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="32dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/activity_evaluations_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="22dp"
+                android:text="Buscar Evaluaciones" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_evaluations_field_date_from"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Desde" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_evaluations_field_date_until"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Hasta" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/activity_evaluations_btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:id="@+id/activity_evaluations_table_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_date"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="18dip"
+                        android:text="Fecha"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_weight"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="18dip"
+                        android:text="Peso"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_imc"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#b0b0b0"
+                        android:padding="18dip"
+                        android:text="IMC"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_delete"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#b0b0b0"
+                        android:padding="18dip"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_evaluations_table_result1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_date_result1"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:padding="18dip"
+                        android:text="20/09/2020"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_weight_result1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:padding="18dip"
+                        android:text="80kg"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/activity_evaluations_table_row_imc_result1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#ffffff"
+                        android:padding="18dip"
+                        android:text="24.7"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:id="@+id/activity_evaluations_table_row_btn_delete_result1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="Borrar"
+                        android:textSize="10dp" />
+                </TableRow>
+
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
