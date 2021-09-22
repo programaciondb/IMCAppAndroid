@@ -13,7 +13,7 @@
             android:name=".EvaluationsActivity"
             android:exported="true" />
         <activity
-            android:name=".AddEvaluation"
+            android:name=".AddEvaluationActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
