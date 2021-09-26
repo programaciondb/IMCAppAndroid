@@ -66,105 +66,123 @@
                 android:layout_height="wrap_content"
                 android:text="Buscar" />
 
-            <TableLayout
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="22dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content"
+                android:text="Mis evaluaciones" />
 
-                <TableRow
-                    android:id="@+id/activity_evaluations_table_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/activity_evaluations_lv_all_evaluations"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_date"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
-                        android:background="#b0b0b0"
-                        android:padding="18dip"
-                        android:text="Fecha"
-                        android:textColor="#000"
-                        android:textSize="18dp" />
+            <Button
+                android:id="@+id/activity_evaluations_btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar Sesión" />
 
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_weight"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:background="#b0b0b0"
-                        android:padding="18dip"
-                        android:text="Peso"
-                        android:textColor="#000"
-                        android:textSize="18dp" />
+<!--            <TableLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:paddingTop="22dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
 
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_imc"
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:background="#b0b0b0"
-                        android:padding="18dip"
-                        android:text="IMC"
-                        android:textColor="#000"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_delete"
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:background="#b0b0b0"
-                        android:padding="18dip"
-                        android:text=""
-                        android:textColor="#000"
-                        android:textSize="18dp" />
-                </TableRow>
+<!--                <TableRow-->
+<!--                    android:id="@+id/activity_evaluations_table_title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
 
-                <TableRow
-                    android:id="@+id/activity_evaluations_table_result1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_date"-->
+<!--                        android:layout_width="125dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#b0b0b0"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text="Fecha"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="18dp" />-->
 
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_date_result1"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:padding="18dip"
-                        android:text="20/09/2020"
-                        android:textColor="#000"
-                        android:textSize="16dp" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_weight"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#b0b0b0"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text="Peso"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="18dp" />-->
 
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_weight_result1"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:padding="18dip"
-                        android:text="80kg"
-                        android:textColor="#000"
-                        android:textSize="16dp" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_imc"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#b0b0b0"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text="IMC"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="18dp" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_delete"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#b0b0b0"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="18dp" />-->
+<!--                </TableRow>-->
 
-                    <TextView
-                        android:id="@+id/activity_evaluations_table_row_imc_result1"
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:background="#ffffff"
-                        android:padding="18dip"
-                        android:text="24.7"
-                        android:textColor="#000"
-                        android:textSize="16dp" />
+<!--                <TableRow-->
+<!--                    android:id="@+id/activity_evaluations_table_result1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
 
-                    <Button
-                        android:id="@+id/activity_evaluations_table_row_btn_delete_result1"
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:text="Borrar"
-                        android:textSize="10dp" />
-                </TableRow>
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_date_result1"-->
+<!--                        android:layout_width="125dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#ffffff"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text="20/09/2020"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="16dp" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_weight_result1"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#ffffff"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text="80kg"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="16dp" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/activity_evaluations_table_row_imc_result1"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#ffffff"-->
+<!--                        android:padding="18dip"-->
+<!--                        android:text="24.7"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="16dp" />-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/activity_evaluations_table_row_btn_delete_result1"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Borrar"-->
+<!--                        android:textSize="10dp" />-->
+<!--                </TableRow>-->
 
 
-            </TableLayout>
+<!--            </TableLayout>-->
 
         </LinearLayout>
     </ScrollView>
