@@ -1,8 +1,9 @@
 package cl.ciisa.IC206IECIREOL.davidbousquetev01.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Evaluation {
+public class Evaluation implements Serializable {
     private long id;
     private Date date;
     private Double weight;

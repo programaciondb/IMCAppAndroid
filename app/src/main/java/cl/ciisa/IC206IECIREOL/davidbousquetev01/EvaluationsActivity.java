@@ -27,6 +27,7 @@ public class EvaluationsActivity extends AppCompatActivity {
     private TextInputLayout tilDateFrom, tilDateUntil;
     private ListView listViewAllEvaluations;
     private Button btnLogout;
+    private Button btnAdd;
 
     private List<Evaluation> evaluationsList = new ArrayList<>();
 
@@ -39,6 +40,7 @@ public class EvaluationsActivity extends AppCompatActivity {
         tilDateUntil = findViewById(R.id.activity_evaluations_field_date_until);
         listViewAllEvaluations = findViewById(R.id.activity_evaluations_lv_all_evaluations);
         btnLogout = findViewById(R.id.activity_evaluations_btn_logout);
+        btnAdd = findViewById(R.id.activity_evaluations_btn_add);
 
         for (int x = 1; x <= 10; ++x) {
             Date evaluationDate = new Date();
@@ -57,6 +59,14 @@ public class EvaluationsActivity extends AppCompatActivity {
 
         listViewAllEvaluations.setAdapter(adapter);
 
+        listViewAllEvaluations.setOnItemClickListener((adapterView, view, index, id) -> {
+            Evaluation evaluation = evaluationsList.get(index);
+
+            Intent intent = new Intent(view.getContext(), DetailActivity.class);
+            intent.putExtra("evaluation", evaluation);
+            view.getContext().startActivity(intent);
+        });
+
         tilDateFrom.getEditText().setOnClickListener(view -> {
             DatePickerFragment.showDatePickerDialog(this, tilDateFrom, new Date());
         });
@@ -69,6 +79,10 @@ public class EvaluationsActivity extends AppCompatActivity {
             Intent i = new Intent(view.getContext(), LoginActivity.class);
             startActivity(i);
             finish();
+        });
+        btnAdd.setOnClickListener(view -> {
+            Intent i = new Intent(view.getContext(), AddEvaluationActivity.class);
+            startActivity(i);
         });
 
     }
