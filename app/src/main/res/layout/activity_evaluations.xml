@@ -6,41 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".EvaluationsActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="32dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/activity_evaluations_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Buscar Evaluaciones"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingTop="32dp"
-            android:paddingRight="32dp"
-            android:paddingBottom="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/activity_evaluations_text_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="22dp"
-                android:text="Buscar Evaluaciones" />
+            android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/activity_evaluations_field_date_from"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -51,9 +49,10 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/activity_evaluations_field_date_until"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="16dp">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -64,36 +63,39 @@
 
             <Button
                 android:id="@+id/activity_evaluations_btn_search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="Buscar" />
-
-            <TextView
-                android:id="@+id/activity_evaluations_tv_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mis evaluaciones" />
-
-            <ListView
-                android:id="@+id/activity_evaluations_lv_all_evaluations"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/activity_evaluations_btn_add"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Agregar Evaluación" />
-
-            <Button
-                android:id="@+id/activity_evaluations_btn_logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cerrar Sesión" />
-
         </LinearLayout>
-    </ScrollView>
 
+        <TextView
+            android:id="@+id/activity_evaluations_tv_clear_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Limpiar filtro"
+            android:textColor="#512DA8" />
+
+        <ListView
+            android:id="@+id/activity_evaluations_lv_all_evaluations"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/activity_evaluations_btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Evaluación" />
+
+        <Button
+            android:id="@+id/activity_evaluations_btn_logout"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

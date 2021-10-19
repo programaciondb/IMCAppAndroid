@@ -3,15 +3,16 @@ package cl.ciisa.IC206IECIREOL.davidbousquetev01;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
+import cl.ciisa.IC206IECIREOL.davidbousquetev01.controllers.EvaluationController;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.Evaluation;
 
 public class DetailActivity extends AppCompatActivity {
-    private TextView textViewId;
-    private TextView textViewDate;
-    private TextView textViewImc;
-    private TextView textViewWeight;
+    private TextView textViewId, textViewDate, textViewImc, textViewWeight;
+    private Button btnDelete, btnBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +25,22 @@ public class DetailActivity extends AppCompatActivity {
         textViewImc = findViewById(R.id.activity_detail_tv_imc);
         textViewWeight = findViewById(R.id.activity_detail_tv_weight);
 
-        textViewId.setText("ID " + Long.toString(evaluation.getId()));
-        textViewDate.setText("Fecha: " + evaluation.getDate().toString());
-        textViewImc.setText("IMC: "+ evaluation.getImc().toString());
-        textViewWeight.setText("Peso: "+ evaluation.getWeight().toString());
+        btnBack = findViewById(R.id.activity_detail_btn_back);
+        btnDelete = findViewById(R.id.activity_detail_btn_delete);
+
+        textViewId.setText("ID " + evaluation.getId());
+        textViewDate.setText("Fecha: " + evaluation.getStringDate());
+        textViewImc.setText("IMC: "+ evaluation.getImc());
+        textViewWeight.setText("Peso: "+ evaluation.getWeight());
+
+        btnDelete.setOnClickListener(view -> {
+            EvaluationController evaluationController = new EvaluationController(view.getContext());
+            evaluationController.delete(evaluation.getId());
+        });
+
+        btnBack.setOnClickListener(view -> {
+            super.onBackPressed();
+        });
 
 
     }

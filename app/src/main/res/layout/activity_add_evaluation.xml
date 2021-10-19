@@ -45,7 +45,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Peso" />
+                    android:hint="Peso"
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -66,6 +67,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Registrar Evaluación" />
+            <Button
+                android:id="@+id/activity_add_evaluation_btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelar" />
 
         </LinearLayout>
     </ScrollView>
