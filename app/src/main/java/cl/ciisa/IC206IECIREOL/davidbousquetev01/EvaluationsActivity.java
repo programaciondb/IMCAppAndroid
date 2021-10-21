@@ -7,22 +7,19 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.controllers.AuthController;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.controllers.EvaluationController;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.Evaluation;
-import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.InputValidator;
-import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.User;
+import cl.ciisa.IC206IECIREOL.davidbousquetev01.lib.InputValidator;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.ui.DatePickerFragment;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.ui.EvaluationAdapter;
 

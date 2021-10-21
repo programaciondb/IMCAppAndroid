@@ -2,6 +2,7 @@ package cl.ciisa.IC206IECIREOL.davidbousquetev01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -9,11 +10,11 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.controllers.AuthController;
-import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.InputValidator;
+import cl.ciisa.IC206IECIREOL.davidbousquetev01.lib.InputValidator;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btnLogin;
+    private Button btnLogin, btnSignUp;
     private TextInputLayout tilUsername, tilPassword;
 
     @Override
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnLogin = findViewById(R.id.activity_login_btn_submit);
+        btnSignUp = findViewById(R.id.activity_login_btn_signup);
         tilUsername = findViewById(R.id.activity_login_field_username);
         tilPassword = findViewById(R.id.activity_login_field_password);
 
@@ -51,6 +53,11 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(view.getContext(), "Campos inválidos", Toast.LENGTH_SHORT).show();
             }
 
+        });
+
+        btnSignUp.setOnClickListener(view -> {
+            Intent i = new Intent(view.getContext(), SignUpActivity.class);
+            startActivity(i);
         });
     }
 }

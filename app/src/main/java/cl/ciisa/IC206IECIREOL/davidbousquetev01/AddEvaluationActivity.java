@@ -13,7 +13,7 @@ import java.util.Date;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.controllers.AuthController;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.controllers.EvaluationController;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.Evaluation;
-import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.InputValidator;
+import cl.ciisa.IC206IECIREOL.davidbousquetev01.lib.InputValidator;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.User;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.ui.DatePickerFragment;
 

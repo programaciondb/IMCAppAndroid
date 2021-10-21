@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
 import android.widget.Toast;
 
 import java.util.Date;
@@ -61,11 +62,20 @@ public class AuthController {
 
     public void checkUserSession() {
         long id = preferences.getLong(KEY_USER_ID, 0);
-        if (id != 0) {
-            Intent i = new Intent(context, EvaluationsActivity.class);
-            context.startActivity(i);
+
+        final int TIMEOUT = 3000;
+
+        new Handler().postDelayed(() -> {
+            if (id != 0) {
+                Toast.makeText(context, "Bienvenido de nuevo", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, EvaluationsActivity.class);
+                context.startActivity(intent);
+            } else {
+                Intent intent = new Intent(context, LoginActivity.class);
+                context.startActivity(intent);
+            }
             ((Activity) context).finish();
-        }
+        }, TIMEOUT);
     }
 
     public void register(User user) {

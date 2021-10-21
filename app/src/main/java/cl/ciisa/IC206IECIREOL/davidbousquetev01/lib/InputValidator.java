@@ -1,4 +1,4 @@
-package cl.ciisa.IC206IECIREOL.davidbousquetev01.models;
+package cl.ciisa.IC206IECIREOL.davidbousquetev01.lib;
 
 import android.content.Context;
 import android.util.Patterns;
@@ -11,6 +11,7 @@ import java.util.Date;
 
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.dao.UserDao;
 import cl.ciisa.IC206IECIREOL.davidbousquetev01.lib.IMCAppDatabase;
+import cl.ciisa.IC206IECIREOL.davidbousquetev01.models.UserEntity;
 
 public class InputValidator {
     private final String DATE_PATTERN = "yyyy-MM-dd";
